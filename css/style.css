@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* list-style-type: none; */
+}
+
+
+.container{
+    width: min( 100% - 15px, 480px);
+    margin-inline: auto;
+    background-color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+main{
+    height: 100%;
+}
+#form{
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+.input__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+#form button{
+    background-color: rgb(113, 245, 113);
+    width: 100%;
+    height: 40px;
+    color: #f8f5f5;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid rgb(113, 245, 113);
+}
+.items-center{
+    display:flex;
+    flex: 0.2;
+}
+.containers{
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 2rem;
+}
+#input{
+    width: 100%;
+    height: 40px;
+}
+#input:focus{
+    outline: none;
+    background: white;
+    border: 1px solid black;
+}
+.relative{
+    display: flex;
+    flex: 0.6;
+    position: relative;
+}
+.label{
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    font-size: 20px;
+    letter-spacing: .3rem;
+    pointer-events: none;
+    background-color: white;
+    padding: 0 5px;
+    transition: all .2s ease;
+}
+#input:focus ~ .label, #input:not(:placeholder-shown) ~ .label{
+    top: -18px;
+}
+.list__container{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
+}
+.buttons button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#input{
+    padding: 5px;
+    font-size: 16px;
+}
+.font-16{
+    font-size: 18px;
+    color: rgb(201, 132, 30) ;
+    text-transform:capitalize;
+}
+
+.btnclear{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.clear{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: rgb(140, 212, 140);
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
+.article{
+    display: none;
+}
+.show-article{
+    display: block;
+}
+.alert-height{
+    width: 300px;
+    height: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 15px 0;
+}
+.alert-height p{
+    font-size: 18px;
+}
+
+.alert-success{
+    color: rgb(99, 187, 99);
+    background-color: rgb(228, 243, 228);
+    letter-spacing: .2rem;
+}
+.alert-danger{
+    color: rgb(245, 66, 66);
+    background-color: rgb(245, 221, 221);
+    letter-spacing: .2rem;
+}
+.edit{
+    color: rgb(113, 245, 113);
+    font-size: 14px;
+}
+.del{
+    color: red;
+    font-size: 14px;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: -10;
+}
+.modal{
+    width: 500px;
+    height: 200px;
+    margin: 15px auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.cancel{
+    position: absolute;
+    top: 7px;
+    font-size: 1.5rem;
+    right: 10px;
+    color: red;
+    cursor: pointer;
+}
+.modal__yes{
+    background-color: white;
+    border: 1px solid rgb(99, 187, 99);
+    color: rgb(99, 187, 99);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+.show__wrapper{
+    visibility: visible;
+    z-index: 0;
+}
